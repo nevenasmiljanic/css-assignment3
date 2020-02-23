@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8" dir="ltr">
+    <meta name="author" content="Nevena Smiljanic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Advanced CSS - Assignment 3</title>
+    
+    <style>
+        body {
+            font-family: "Montserrat";
+            font-style: normal;
+            margin: 100px auto;
+            max-width: 800px;
+        }
+        h2 {
+            font-weight: 100;
+            font-size: 18px;
+        }
+        #container {
+            display: flex;
+            flex-flow: column wrap;
+            margin: 0;            
+        }
+        #header, #article {
+            flex-basis: 100%;
+        }
+        #main {
+            display: inline-grid;
+            grid-template-columns: repeat(5, 120px);
+            grid-column-gap: 50px;
+            grid-row-gap: 50px;              
+        } 
+        @media screen and (max-width: 768px) {
+            #main {
+                grid-template-columns: repeat(3, 120px);                
+            }
+        }
+        @media screen and (max-width: 414px) {
+            #main {
+                grid-template-columns: repeat(1, 120px);
+           }
+            p {
+               visibility: hidden;
+           }
+        } 
+        .image {
+            background-color: #77c3f2;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-top: 1px double gray;
+            border-left: 1px double gray;
+            border-right: 1px double gray;
+            justify-items: center;
+            text-align: center;
+         }
+        img {
+            height: 80px; 
+            width: 100px;
+        }
+        .text {
+            text-align: center;
+            background-color: #e4eaf5;
+            border-bottom: 1px double gray;
+            border-left: 1px double gray;
+            border-right: 1px double gray;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            height: 20px;
+            padding-top: 5px;
+            font-size: 10px;
+        }
+        p {
+            text-align: justify;
+            max-width: 800px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+    
+<body>
+     <div id="container">
+     <header>
+         <h2>Gallery Heading</h2>
+     </header>
+     <article>
+        <div id="main">
+        <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+         <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+         <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+         <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+         <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+        <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+        <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+        <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+        <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+        <div>
+            <div class="image"><img src="picture/placeholder-image.png" alt="Placeholder-image"></div>
+            <div class="text">Image Title</div>
+         </div>
+        </div> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>    
+    </div>
+</body>
+</html>
+
